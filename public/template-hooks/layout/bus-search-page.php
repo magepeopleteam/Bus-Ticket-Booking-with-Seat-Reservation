@@ -1,4 +1,5 @@
 <?php
+$mage_bus_total_seats_availabel = 0;
 function mage_bus_search_page() {
     global $wbtmmain;
     $global_target   = $wbtmmain->bus_get_option('search_target_page', 'label_setting_sec') ? get_post_field( 'post_name', $wbtmmain->bus_get_option('search_target_page', 'label_setting_sec')) : 'bus-search-list' ;
@@ -127,6 +128,7 @@ function mage_bus_item_seat_details($return) {
             }
             
             mage_bus_seat_plan($seat_plan_type, $bus_width, $seat_price, $return);
+            global $mage_bus_total_seats_availabel;
             ?>
             <div class="mage_bus_customer_sec mage_default" style="width: calc(100% - 20px - <?php echo $bus_width; ?>px);">
                 <div class="flexEqual">
@@ -164,7 +166,7 @@ function mage_bus_item_seat_details($return) {
                             <span><?php _e('Seat','bus-ticket-booking-with-seat-reservation'); ?></span>
                         </h6>
                         <h6 class="mar_t_xs wbtm-details-page-list-total-avl-seat">
-                            <strong><?php echo mage_bus_available_seat($return); ?></strong>
+                            <strong><?php echo $mage_bus_total_seats_availabel //mage_bus_available_seat($return); ?></strong>
                             <span><?php _e('Seat Available','bus-ticket-booking-with-seat-reservation'); ?></span>
                         </h6>
                     </div>
@@ -226,7 +228,7 @@ function mage_bus_item_seat_details($return) {
 
 //bus seat plan
 function mage_bus_seat_plan($seat_plan_type, $bus_width, $price, $return) {
-
+    global $mage_bus_total_seats_availabel;
     $current_driver_position = get_post_meta(get_the_id(), 'driver_seat_position', true);
     $seat_panel_settings = get_option('wbtm_bus_settings');
     $driver_image = $seat_panel_settings['diriver_image'] ? wp_get_attachment_url($seat_panel_settings['diriver_image'], 'full') : WBTM_PLUGIN_URL . '/public/images/driver-default.png';
@@ -239,6 +241,7 @@ function mage_bus_seat_plan($seat_plan_type, $bus_width, $price, $return) {
                 <div class="padding"><img class="<?php echo ($current_driver_position == 'driver_left') ? 'mageLeft' : 'mageRight'; ?>" src="<?php echo $driver_image; ?>" alt=""></div>
             </div>
             <?php
+            $mage_bus_total_seats_availabel = mage_bus_total_seat();
             if ($seat_plan_type > 0) {
                 $seats_rows = get_post_meta(get_the_id(), 'wbtm_bus_seats_info', true);
                 $seat_col = get_post_meta(get_the_id(), 'wbtm_seat_cols', true);
@@ -246,7 +249,7 @@ function mage_bus_seat_plan($seat_plan_type, $bus_width, $price, $return) {
                     echo '<div class="flexEqual mage_bus_seat">';
                     for ($i = 1; $i <= $seat_col; $i++) {
                         $seat_name = $seat["seat" . $i];
-                        mage_bus_seat($seat_plan_type, $seat_name, $price, $return, 0, $all_stopages_name);
+                        $mage_bus_total_seats_availabel = mage_bus_seat($seat_plan_type, $seat_name, $price, $return, 0, $all_stopages_name, $mage_bus_total_seats_availabel);
                     }
                     echo '</div>';
                 }
@@ -292,8 +295,7 @@ function mage_bus_seat_plan($seat_plan_type, $bus_width, $price, $return) {
 }
 
 //bus seat place
-function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, $all_stopages_name) {
-
+function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, $all_stopages_name, $mage_bus_total_seats_availabel) {
 
     if (strtolower($seat_name) == 'door') {
         echo '<div></div>';
@@ -304,13 +306,30 @@ function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, 
     } else {
         $seat_status = mage_bus_seat_status($seat_name, $return);
 
+        // Partial Route
         $seat_droping_point = mage_bus_seat_droping_point($seat_name, $return);
         $get_search_stopage_position = array_search($_GET['bus_start_route'], $all_stopages_name);
+        $get_search_droping_position = array_search($_GET['bus_end_route'], $all_stopages_name);
         $get_seat_stopage_position = array_search($seat_droping_point, $all_stopages_name);
 
         if(!$get_seat_stopage_position || empty($get_seat_stopage_position)) {
             $get_seat_stopage_position = count($all_stopages_name);
         }
+        if(!$get_search_droping_position || empty($get_search_droping_position)) {
+            $get_search_droping_position = count($all_stopages_name);
+        }
+
+        $partial_route_condition = false;
+        if( (int)$get_seat_stopage_position > (int)$get_search_stopage_position ) {
+            if( (int)$get_seat_stopage_position >= (int)$get_search_droping_position ) {
+                $partial_route_condition = false;
+            } else {
+                $partial_route_condition = true;
+            }
+        } else {
+            $partial_route_condition = false;
+        }
+        // Partial Route END
 
         if (wbtm_find_seat_in_cart($seat_name)) {
             ?>
@@ -318,13 +337,15 @@ function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, 
                 <span class="mage_bus_seat_icon"><?php echo $seat_name; ?><span class="bus_handle"></span></span>
             </div>
             <?php
-        } elseif ( $seat_status == 1 && ( (int)$get_seat_stopage_position > (int)$get_search_stopage_position ) ) {
+        } elseif ( $seat_status == 1 && $partial_route_condition === true ) {
+            $mage_bus_total_seats_availabel--;
             ?>
             <div class="flex_justifyCenter mage_seat_booked" title="<?php _e('Already Booked By another !','bus-ticket-booking-with-seat-reservation'); ?>">
                 <span class="mage_bus_seat_icon"><?php echo $seat_name; ?><span class="bus_handle"></span></span>
             </div>
             <?php
-        } elseif ( $seat_status == 2 && ( (int)$get_seat_stopage_position > (int)$get_search_stopage_position ) ) {
+        } elseif ( $seat_status == 2 && $partial_route_condition === true ) {
+            $mage_bus_total_seats_availabel--;
             ?>
             <div class="flex_justifyCenter mage_seat_confirmed" title="<?php _e('Already Sold By another !','bus-ticket-booking-with-seat-reservation'); ?>">
                 <span class="mage_bus_seat_icon"><?php echo $seat_name; ?><span class="bus_handle"></span></span>
@@ -341,6 +362,8 @@ function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, 
             echo '<div></div>';
         }
     }
+
+    return $mage_bus_total_seats_availabel;
 }
 
 //next 6  date suggestion
