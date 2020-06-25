@@ -1,0 +1,706 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bus Ticket Booking with Seat Reservation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 10:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#: admin/class/class-meta-box.php:126
+msgid " Add New Seat Row"
+msgstr ""
+
+#: admin/class/class-setting-page.php:20
+msgid "<i class=\"fas fa fa-cog\"></i> General Settings"
+msgstr ""
+
+#: admin/class/class-setting-page.php:43
+msgid "<i class=\"fas fa fa-cog\"></i> Seat Panel Settings"
+msgstr ""
+
+#: admin/class/class-setting-page.php:103
+msgid "<i class=\"fas fa fa-cog\"></i> Translation Settings"
+msgstr ""
+
+#. Description of the plugin
+msgid "A Complete Bus Ticketig System for WordPress & WooCommerce"
+msgstr ""
+
+#: admin/class/class-setting-page.php:75 admin/class/class-setting-page.php:76
+msgid "Active Seat Image "
+msgstr ""
+
+#: admin/class/class-create-cpt.php:20 admin/class/class-create-cpt.php:21
+msgid "Add New Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:18
+msgid "Add New Bus Type"
+msgstr ""
+
+#: includes/class-functions.php:103 includes/class-functions.php:161
+#: admin/class/OLD__class-meta-box.php:126 admin/class/class-meta-box.php:246
+msgid "Add New Seat Row"
+msgstr ""
+
+#: admin/class/class-create-tax.php:23
+msgid "Add or remove Bus Type"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:19
+msgid "All Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:14
+msgid "All Bus Type"
+msgstr ""
+
+#: public/templates/search-table-head.php:21
+#: admin/class/class-setting-page.php:238
+msgid "ARRIVAL"
+msgstr ""
+
+#: admin/class/class-setting-page.php:69
+msgid "Blank Seat Image"
+msgstr ""
+
+#: admin/class/class-setting-page.php:68
+msgid "Blank Seat Image "
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:310
+msgid "Boarding Point:"
+msgstr ""
+
+#: public/templates/single-bus.php:57 public/templates/single-bus.php:107
+#: admin/class/class-setting-page.php:319
+msgid "Boarding Points"
+msgstr ""
+
+#: admin/class/class-setting-page.php:297
+msgid "BOOK NOW"
+msgstr ""
+
+#: public/templates/bus-list.php:34 public/templates/single-bus.php:283
+#: public/templates/bus-search-result.php:158
+#: public/templates/bus-search-result-return.php:124
+msgid "Book Now"
+msgstr ""
+
+#: admin/class/class-setting-page.php:82 admin/class/class-setting-page.php:83
+msgid "Booked Seat Image "
+msgstr ""
+
+#: admin/class/class-setting-page.php:31
+msgid "Buffer Time"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:14 admin/class/class-create-cpt.php:15
+msgid "Bus"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:30
+msgid "Bus Feature Image"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:18
+msgid "Bus Item:"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:16 admin/class/class-create-cpt.php:17
+msgid "Bus List"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:36
+msgid "Bus list"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:37
+msgid "Bus list navigation"
+msgstr ""
+
+#: public/templates/search-table-head.php:7
+msgid "Bus Name"
+msgstr ""
+
+#: admin/class/class-setting-page.php:189
+msgid "Bus Name:"
+msgstr ""
+
+#: public/templates/bus-list.php:21 public/templates/single-bus.php:47
+#: admin/class/class-setting-page.php:305
+msgid "Bus No:"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:28
+msgid "Bus Not found"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:29
+msgid "Bus Not found in Trash"
+msgstr ""
+
+#. Name of the plugin
+msgid "Bus Ticket Booking with Seat Reservation"
+msgstr ""
+
+#: admin/class/class-create-tax.php:13
+msgid "Bus Type"
+msgstr ""
+
+#: admin/class/class-create-tax.php:29
+msgid "Bus Type list"
+msgstr ""
+
+#: admin/class/class-create-tax.php:30
+msgid "Bus Type list navigation"
+msgstr ""
+
+#: admin/class/class-setting-page.php:114
+msgid "BUY TICKET"
+msgstr ""
+
+#: public/template-hooks/search-form/title.php:5
+msgid "BUY TICKET:"
+msgstr ""
+
+#: admin/class/class-create-tax.php:24
+msgid "Choose from the most used"
+msgstr ""
+
+#: public/templates/search-table-head.php:11
+#: admin/class/class-setting-page.php:203
+msgid "COACH NO"
+msgstr ""
+
+#: admin/class/OLD__class-meta-box.php:66 admin/class/class-meta-box.php:66
+#: admin/class/class-meta-box.php:184
+msgid "Create Seat Plan"
+msgstr ""
+
+#: public/templates/single-bus.php:242
+#: public/templates/bus-search-result.php:109
+msgid "Date"
+msgstr ""
+
+#: admin/class/class-setting-page.php:136
+#: public/template-hooks/search-form/dates.php:8
+msgid "Date of Journey:"
+msgstr ""
+
+#: public/templates/bus-search-result-return.php:86
+#: public/shortcode/shortcode.php:126 public/shortcode/shortcode.php:208
+#: admin/class/class-setting-page.php:182
+msgid "Date:"
+msgstr ""
+
+#: public/templates/search-table-head.php:9
+#: admin/class/class-setting-page.php:196
+msgid "DEPARTING"
+msgstr ""
+
+#: admin/class/class-setting-page.php:61 admin/class/class-setting-page.php:62
+msgid "Driver Image "
+msgstr ""
+
+#: admin/class/OLD__class-meta-box.php:45 admin/class/class-meta-box.php:45
+msgid "Driver Seat Position"
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:312
+msgid "Dropping Point:"
+msgstr ""
+
+#: public/templates/single-bus.php:73 public/templates/single-bus.php:123
+#: admin/class/class-setting-page.php:326
+msgid "Dropping Points"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:23
+msgid "Edit Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:19
+msgid "Edit Bus Type"
+msgstr ""
+
+#: public/templates/search-table-head.php:15
+#: admin/class/class-setting-page.php:217
+msgid "END"
+msgstr ""
+
+#: public/templates/bus-list.php:27
+msgid "End"
+msgstr ""
+
+#: admin/class/class-setting-page.php:239
+msgid "Enter the text which you want to display as ARRIVAL Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:320
+msgid ""
+"Enter the text which you want to display as Boarding Points single bus "
+"details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:298
+msgid ""
+"Enter the text which you want to display as BOOK NOW button details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:190
+msgid ""
+"Enter the text which you want to display as Bus Name Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:306
+msgid ""
+"Enter the text which you want to display as Bus No single bus details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:204
+msgid ""
+"Enter the text which you want to display as COACH NO Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:137
+#: admin/class/class-setting-page.php:145
+msgid ""
+"Enter the text which you want to display as Date of Journey Search form page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:183
+msgid "Enter the text which you want to display as Date Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:197
+msgid ""
+"Enter the text which you want to display as DEPARTING Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:327
+msgid ""
+"Enter the text which you want to display as Dropping Points single bus "
+"details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:218
+msgid "Enter the text which you want to display as END Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:225
+msgid "Enter the text which you want to display as FARE Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:153
+msgid "Enter the text which you want to display as One Way Search form page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:284
+msgid "Enter the text which you want to display as Remove Details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:161
+msgid "Enter the text which you want to display as Return Search form page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:176
+msgid "Enter the text which you want to display as Route Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:169
+msgid ""
+"Enter the text which you want to display as SEARCH BUSES button form page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:343
+msgid ""
+"Enter the text which you want to display as search button single bus details "
+"Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:351
+msgid ""
+"Enter the text which you want to display as search button single bus seat "
+"list in cart Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:276
+msgid "Enter the text which you want to display as Seat No Details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:246
+msgid ""
+"Enter the text which you want to display as SEATS AVAILABLE Search Result "
+"Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:335
+msgid ""
+"Enter the text which you want to display as Select Journey Date single bus "
+"details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:268
+msgid ""
+"Enter the text which you want to display as Start & Arrival Time Details "
+"Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:211
+msgid ""
+"Enter the text which you want to display as STARTING Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:115
+#: admin/class/class-setting-page.php:122
+#: admin/class/class-setting-page.php:129
+msgid "Enter the text which you want to display as To Search form page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:291
+msgid "Enter the text which you want to display as Total Details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:313
+msgid ""
+"Enter the text which you want to display as Total Seat  bus details Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:232
+msgid "Enter the text which you want to display as TYPE Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:253
+msgid "Enter the text which you want to display as VIEW Search Result Page."
+msgstr ""
+
+#: admin/class/class-setting-page.php:260
+msgid ""
+"Enter the text which you want to display as View Seats button Result Page."
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:315
+msgid "Extra Bag: "
+msgstr ""
+
+#: public/templates/search-table-head.php:17
+#: admin/class/class-setting-page.php:224
+msgid "FARE"
+msgstr ""
+
+#: public/templates/bus-list.php:30 public/templates/single-bus.php:268
+#: public/templates/bus-search-result.php:136
+#: public/templates/bus-search-result-return.php:108
+msgid "Fare"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:38
+msgid "Filter Bus list"
+msgstr ""
+
+#: admin/class/class-setting-page.php:121
+#: public/template-hooks/search-form/bus-stops-list.php:9
+msgid "From"
+msgstr ""
+
+#. URI of the plugin
+msgid "http://mage-people.com"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://www.mage-people.com/"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:34
+msgid "Insert into Bus"
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:306
+msgid "Journey Date:"
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:308
+msgid "Journey Time:"
+msgstr ""
+
+#: includes/class-functions.php:42
+msgid "Left"
+msgstr ""
+
+#. Author of the plugin
+msgid "MagePeople Team"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:22
+msgid "New Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:17
+msgid "New Bus Type Name"
+msgstr ""
+
+#: public/seat-template/seat_plan_1.php:86
+#: public/seat-template/seat_plan_3.php:86
+#: public/seat-template/seat_plan_2.php:87 public/templates/single-bus.php:193
+msgid "No Bus Found, Try Another Date."
+msgstr ""
+
+#: admin/class/class-create-tax.php:28
+msgid "No Bus Type"
+msgstr ""
+
+#: admin/class/class-create-tax.php:27
+msgid "Not Found"
+msgstr ""
+
+#: admin/class/class-setting-page.php:152
+#: public/template-hooks/search-form/radio-button.php:8
+msgid "One Way"
+msgstr ""
+
+#: admin/class/class-create-tax.php:15
+msgid "Parent Bus Type"
+msgstr ""
+
+#: admin/class/class-create-tax.php:16
+msgid "Parent Bus Type:"
+msgstr ""
+
+#: admin/class/class-setting-page.php:32
+msgid "Please enter here car buffer time in Hour. By default is 0"
+msgstr ""
+
+#: includes/class-functions.php:885
+msgid "Please Select"
+msgstr ""
+
+#: admin/class/class-create-tax.php:25
+msgid "Popular Bus Type"
+msgstr ""
+
+#: includes/class-functions.php:85 includes/class-functions.php:99
+#: includes/class-functions.php:143 includes/class-functions.php:157
+#: public/templates/single-bus.php:270
+#: public/templates/bus-search-result.php:140
+#: public/templates/bus-search-result-return.php:109
+#: admin/class/OLD__class-meta-box.php:110
+#: admin/class/OLD__class-meta-box.php:122
+#: admin/class/class-setting-page.php:283 admin/class/class-meta-box.php:110
+#: admin/class/class-meta-box.php:122 admin/class/class-meta-box.php:230
+#: admin/class/class-meta-box.php:242
+msgid "Remove"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:32
+msgid "Remove Bus featured image"
+msgstr ""
+
+#: admin/class/class-setting-page.php:160
+#: public/template-hooks/search-form/radio-button.php:11
+msgid "Return"
+msgstr ""
+
+#: admin/class/class-setting-page.php:144
+#: public/template-hooks/search-form/dates.php:21
+msgid "Return Date:"
+msgstr ""
+
+#: includes/class-functions.php:43
+msgid "Right"
+msgstr ""
+
+#: public/templates/single-bus.php:234
+#: public/templates/bus-search-result.php:101
+#: public/templates/bus-search-result-return.php:79
+#: public/shortcode/shortcode.php:124 public/shortcode/shortcode.php:207
+#: admin/class/class-setting-page.php:175
+msgid "Route"
+msgstr ""
+
+#: public/templates/single-bus.php:160 admin/class/class-setting-page.php:342
+msgid "Search"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:27
+msgid "Search Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:26
+msgid "Search Bus Type"
+msgstr ""
+
+#: admin/class/class-setting-page.php:168
+msgid "SEARCH BUSES"
+msgstr ""
+
+#: public/template-hooks/search-form/button.php:6
+msgid "Search Buses"
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:300
+#: admin/class/class-setting-page.php:350
+msgid "Seat List:"
+msgstr ""
+
+#: public/templates/single-bus.php:267
+#: public/templates/bus-search-result.php:132
+#: public/templates/bus-search-result-return.php:107
+#: admin/class/class-setting-page.php:275
+msgid "Seat No"
+msgstr ""
+
+#: admin/class/class-meta-box.php:169
+msgid "Seat Plan For Upper Deck"
+msgstr ""
+
+#: public/templates/search-table-head.php:23
+msgid "SEATS AVAILABLE"
+msgstr ""
+
+#: admin/class/class-setting-page.php:245
+msgid "SEATS AVAILABLE "
+msgstr ""
+
+#: public/templates/single-bus.php:109
+msgid "Select Boarding Point"
+msgstr ""
+
+#: public/templates/single-bus.php:125
+msgid "Select Drop Off Point"
+msgstr ""
+
+#: public/templates/single-bus.php:153 admin/class/class-setting-page.php:334
+msgid "Select Journey Date"
+msgstr ""
+
+#: admin/class/class-create-tax.php:22
+msgid "Separate Category with commas"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:31
+msgid "Set Bus featured image"
+msgstr ""
+
+#: admin/class/class-setting-page.php:365
+#: admin/class/class-setting-page.php:366
+#: admin/class/class-setting-page.php:367
+#: admin/class/class-setting-page.php:368
+msgid "Settings"
+msgstr ""
+
+#: admin/class/class-setting-page.php:89 admin/class/class-setting-page.php:90
+msgid "Sold Seat Image "
+msgstr ""
+
+#: includes/class-add-bus-info-to-cart.php:29
+msgid "Sorry, Your Selected Seat Already Booked by another user"
+msgstr ""
+
+#: public/templates/single-bus.php:249
+#: public/templates/bus-search-result.php:117
+#: public/templates/bus-search-result-return.php:92
+#: admin/class/class-setting-page.php:267
+msgid "Start & Arrival Time"
+msgstr ""
+
+#: public/templates/bus-list.php:24
+msgid "Start From:"
+msgstr ""
+
+#: public/templates/search-table-head.php:13
+#: admin/class/class-setting-page.php:210
+msgid "STARTING"
+msgstr ""
+
+#: admin/class/class-setting-page.php:27 admin/class/class-setting-page.php:47
+#: admin/class/class-setting-page.php:110
+msgid "This is section details"
+msgstr ""
+
+#: admin/class/class-setting-page.php:128
+#: public/template-hooks/search-form/bus-stops-list.php:23
+msgid "To:"
+msgstr ""
+
+#: public/templates/single-bus.php:274
+#: public/templates/bus-search-result.php:146
+#: public/templates/bus-search-result-return.php:115
+#: admin/class/class-setting-page.php:290
+msgid "Total"
+msgstr ""
+
+#: admin/class/OLD__class-meta-box.php:57 admin/class/class-meta-box.php:57
+#: admin/class/class-meta-box.php:175
+msgid "Total Seat Columns"
+msgstr ""
+
+#: admin/class/OLD__class-meta-box.php:62 admin/class/class-meta-box.php:62
+#: admin/class/class-meta-box.php:180
+msgid "Total Seat Rows"
+msgstr ""
+
+#: public/templates/single-bus.php:50 admin/class/class-setting-page.php:312
+msgid "Total Seat:"
+msgstr ""
+
+#: public/templates/search-table-head.php:19
+#: admin/class/class-setting-page.php:231
+msgid "TYPE"
+msgstr ""
+
+#: public/templates/bus-list.php:18
+msgid "Type:"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:24
+msgid "Update Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:20
+msgid "Update Bus Type"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:35
+msgid "Uploaded to this Bus"
+msgstr ""
+
+#: public/seat-template/global_seat_plan.php:16
+#: admin/class/class-setting-page.php:56
+msgid "Upper Deck"
+msgstr ""
+
+#: admin/class/class-setting-page.php:52 admin/class/class-setting-page.php:53
+msgid "Upper Deck Title "
+msgstr ""
+
+#: admin/class/class-create-cpt.php:33
+msgid "Use as Bus featured image"
+msgstr ""
+
+#: public/templates/search-table-head.php:25
+#: admin/class/class-setting-page.php:252
+msgid "VIEW"
+msgstr ""
+
+#: admin/class/class-create-cpt.php:25 admin/class/class-create-cpt.php:26
+msgid "View Bus"
+msgstr ""
+
+#: admin/class/class-create-tax.php:21
+msgid "View Bus Type"
+msgstr ""
+
+#: public/templates/bus-search-result.php:47
+#: admin/class/class-setting-page.php:259
+msgid "View Seats"
+msgstr ""
