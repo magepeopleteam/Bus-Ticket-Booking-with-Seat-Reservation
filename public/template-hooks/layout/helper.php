@@ -366,7 +366,7 @@ function mage_bus_seat_status($field_name, $return) {
 }
 
 //find seat Droping Point
-function mage_bus_seat_droping_point($field_name, $return) {
+function mage_bus_seat_droping_point($field_name, $point, $return) {
     $date = $return ? wbtm_convert_date_to_php(mage_bus_isset('r_date')) :  wbtm_convert_date_to_php(mage_bus_isset('j_date'));
     $start = $return ? mage_bus_isset('bus_end_route') : mage_bus_isset('bus_start_route');
     $end = $return ? mage_bus_isset('bus_start_route') : mage_bus_isset('bus_end_route');
@@ -416,7 +416,7 @@ function mage_bus_seat_droping_point($field_name, $return) {
     );
     $q = new WP_Query($args);
     $booking_id = $q->posts[0]->ID;
-    return get_post_meta($booking_id, 'wbtm_droping_point', true) ? get_post_meta($booking_id, 'wbtm_droping_point', true) : 0;
+    return get_post_meta($booking_id, $point, true) ? get_post_meta($booking_id, $point, true) : 0;
 }
 
 // Return Array

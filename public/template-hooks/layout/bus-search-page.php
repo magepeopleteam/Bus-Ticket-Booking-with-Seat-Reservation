@@ -307,27 +307,32 @@ function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, 
         $seat_status = mage_bus_seat_status($seat_name, $return);
 
         // Partial Route
-        $seat_droping_point = mage_bus_seat_droping_point($seat_name, $return);
-        $get_search_stopage_position = array_search($_GET['bus_start_route'], $all_stopages_name);
-        $get_search_droping_position = array_search($_GET['bus_end_route'], $all_stopages_name);
-        $get_seat_stopage_position = array_search($seat_droping_point, $all_stopages_name);
+        $seat_boarding_point = mage_bus_seat_droping_point($seat_name, 'wbtm_boarding_point', $return);
+        $seat_droping_point = mage_bus_seat_droping_point($seat_name, 'wbtm_droping_point', $return);
 
-        if(!$get_seat_stopage_position || empty($get_seat_stopage_position)) {
-            $get_seat_stopage_position = count($all_stopages_name);
+        $get_search_start_position = (int)array_search($_GET['bus_start_route'], $all_stopages_name);
+        $get_search_droping_position = (int)array_search($_GET['bus_end_route'], $all_stopages_name);
+
+        $get_seat_boarding_position = (int)array_search($seat_boarding_point, $all_stopages_name);
+        $get_seat_droping_position = (int)array_search($seat_droping_point, $all_stopages_name);
+
+
+        if(!$get_seat_droping_position || empty($get_seat_droping_position)) {
+            $get_seat_droping_position = count($all_stopages_name);
         }
         if(!$get_search_droping_position || empty($get_search_droping_position)) {
             $get_search_droping_position = count($all_stopages_name);
         }
 
         $partial_route_condition = false;
-        if( (int)$get_seat_stopage_position > (int)$get_search_stopage_position ) {
-            if( (int)$get_seat_stopage_position >= (int)$get_search_droping_position ) {
+        if( $get_seat_droping_position <= $get_search_start_position ) {
+            $partial_route_condition = false;
+        } else {
+            if( $get_seat_boarding_position >= $get_search_droping_position ) {
                 $partial_route_condition = false;
             } else {
                 $partial_route_condition = true;
             }
-        } else {
-            $partial_route_condition = false;
         }
         // Partial Route END
 
@@ -338,14 +343,14 @@ function mage_bus_seat($seat_plan_type, $seat_name, $price, $return, $seat_col, 
             </div>
             <?php
         } elseif ( $seat_status == 1 && $partial_route_condition === true ) {
-            $mage_bus_total_seats_availabel--;
+            $mage_bus_total_seats_availabel--; // for seat available
             ?>
             <div class="flex_justifyCenter mage_seat_booked" title="<?php _e('Already Booked By another !','bus-ticket-booking-with-seat-reservation'); ?>">
                 <span class="mage_bus_seat_icon"><?php echo $seat_name; ?><span class="bus_handle"></span></span>
             </div>
             <?php
         } elseif ( $seat_status == 2 && $partial_route_condition === true ) {
-            $mage_bus_total_seats_availabel--;
+            $mage_bus_total_seats_availabel--; // for seat available
             ?>
             <div class="flex_justifyCenter mage_seat_confirmed" title="<?php _e('Already Sold By another !','bus-ticket-booking-with-seat-reservation'); ?>">
                 <span class="mage_bus_seat_icon"><?php echo $seat_name; ?><span class="bus_handle"></span></span>
