@@ -14,10 +14,6 @@ function wbtm_add_custom_css_codes(){
     ob_start();
 ?>
 <style>
-[class^='mage'] button[class*='mage_button'] {
-    color: <?php echo wbtm_get_style('wbtm_search_btn_text_color','#fff'); ?>;
-    background-color: <?php echo wbtm_get_style('wbtm_search_btn_bg_color','#0a4b78'); ?>;
-}
 ul.mage_list_inline li.mage_active {
     background-color: <?php echo wbtm_get_style('wbtm_search_next_date_active_bg_color','#777'); ?>;
 }
@@ -48,6 +44,11 @@ button.mage_button_xs.mage_bus_details_toggle {
 form.mage_form button[class*='mage_button'] {
     background: <?php echo wbtm_get_style('wbtm_book_now_btn_bg_color','#0a4b78'); ?>;
     color:<?php echo wbtm_get_style('wbtm_book_now_btn_text_color','#fff'); ?>;
+}
+form.mage_form button[class*='mage_button_search'] {
+    color: <?php echo wbtm_get_style('wbtm_search_btn_text_color','#fff'); ?>;
+    background-color: <?php echo wbtm_get_style('wbtm_search_btn_bg_color','#0a4b78'); ?>;
+    border: 1px solid <?php echo wbtm_get_style('wbtm_search_btn_bg_color','#0a4b78'); ?>;
 }
 .wbtm-details-page-list-total-avl-seat, .flexEqual.mage_bus_selected_list, .mage_customer_info_area .mage_title {
     background: <?php echo wbtm_get_style('wbtm_search_list_bus_details_title_bg_color','#ddd'); ?>;

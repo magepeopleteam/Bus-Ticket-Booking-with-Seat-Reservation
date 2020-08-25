@@ -52,3 +52,10 @@ div.mage {display: block !important;}
 
 [class*='mt_25'] {margin-top: 25px !important;}
 [class*='ml_25'] {margin-left: 25px !important;}
+strong.deck-type-text {
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 13px 0 0 !important;
+    color: #3F51B5;
+}

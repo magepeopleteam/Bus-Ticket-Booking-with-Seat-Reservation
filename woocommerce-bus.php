@@ -37,6 +37,19 @@ function wbtm_deactivate_wbtm_plugin() {
 register_activation_hook( __FILE__, 'wbtm_activate_wbtm_plugin' );
 register_deactivation_hook( __FILE__, 'wbtm_deactivate_wbtm_plugin' );
 
+function appsero_init_tracker_bus_ticket_booking_with_seat_reservation() {
+
+    if ( ! class_exists( 'Appsero\Client' ) ) {
+      require_once __DIR__ . '/lib/appsero/src/Client.php';
+    }
+
+    $client = new Appsero\Client( '183b453a-7a2a-47f6-aa7e-10bf246d1d44', 'Bus Ticket Booking with Seat Reservation', __FILE__ );
+
+    // Active insights
+    $client->insights()->init();
+
+}
+appsero_init_tracker_bus_ticket_booking_with_seat_reservation();
 
 class Wbtm_Base{
 	

@@ -1,5 +1,5 @@
 form.mage_form {}
-form.mage_form label {margin: var(--default-mp-xs) 0 0 0;text-transform: capitalize;}
+form.mage_form label {margin: var(--default-mp-xs) 0 0 0;text-transform: capitalize;position: relative;}
 form.mage_form label p {width: 100%;margin: 0 0 var(--default-mp-xs) var(--default-mp-xs);}
 form.mage_form button[class*='mage_button'] {height: 40px;}
 .mage_form_control {
@@ -32,7 +32,7 @@ ul.mage_input_select_list li:hover {background-color: #777;color: #fff;}
 .mage_form_horizontal {max-width: 500px;margin: 0 auto;}
 /*****Form inline*******/
 .mage_form_inline {padding: 15px;margin: 15px 0 0 0;}
-.mage_form_inline .mage_form_list {max-width: calc(20% - 10px);width: 100%;margin: 0 5px;}
+.mage_form_inline .mage_form_list {width: 100%;margin: 0 5px;}
 /********Form Horizontal**************/
 .mage_form_horizontal {max-width: 500px;width: 100%;margin: 0 auto;padding: var(--default-mp);}
 /*****Form Qty inc dec*******/
@@ -40,8 +40,54 @@ div.mage_form_qty {max-width: 140px;border: 1px solid var(--default-border-color
 div.mage_form_qty .mage_form_control {width: 50%;border-top: none !important;border-bottom: none !important;text-align: center;}
 [class*="mage_qty"] {width: 25%;color: #777;font-size: var(--default-font-size) !important;cursor: pointer;}
 [class*="mage_qty"] span {margin: 0 !important;}
+.mage_form {
+    position: relative;
+}
+
+.mage-form-sm .mage_form_list {
+    max-width: calc(50% - 10px)
+}
+.mage-form-lg .mage_form_list {
+    max-width: calc(20% - 10px)
+}
+.mage-form-sm .mage_form_list:last-child {
+    max-width: 100%;
+}
+.mage-form-sm .mage_form_list .mage_input_select_list {
+    top: 70px;
+}
+
+.activeMageSelect:after {
+    content: '';
+    position: absolute;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 5px solid red;
+    top: 97%;
+    left: 0;
+    display: block;
+    z-index: 99999;
+    right: 0;
+    width: 3px;
+    margin: 0 auto;
+}
+
+input[type="text"].mage_form_control::-webkit-input-placeholder {
+    color: #bdd1ff;
+}
+input[type="text"].mage_form_control::-moz-placeholder {
+    color: #bdd1ff;
+}
+input[type="text"].mage_form_control::-ms-input-placeholder {
+    color: #bdd1ff;
+}
+
+
+
+
+
 /**********Responsive*********/
-@media only screen and (max-width: 1250px) {
+/* @media only screen and (max-width: 1250px) {
     .mage_form_inline .mage_form_list {max-width: calc(25% - 10px);}
 }
 @media only screen and (max-width: 1050px) {
@@ -49,7 +95,7 @@ div.mage_form_qty .mage_form_control {width: 50%;border-top: none !important;bor
 }
 @media only screen and (max-width: 850px) {
     .mage_form_inline .mage_form_list {max-width: calc(50% - 10px);}
-}
+} */
 @media only screen and (max-width: 600px) {
     .mage_form_inline .mage_form_list {max-width: 100%;min-width: 100%;}
 }

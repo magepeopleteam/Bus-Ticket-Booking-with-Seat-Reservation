@@ -484,6 +484,10 @@ a.button.remove-seat-row {
     padding: 5px;
 }
 
+.wbtm-bus-lists:nth-child(3n) {
+    margin-right: 0;
+}
+
 .wbtm-bus-lists h2 {
     font-size: 20px !important;
     padding: 0;
@@ -815,6 +819,11 @@ button{
 
 .wbtm_next_days_tab .current-tab a {
     background: #f1eded;
+}
+.post-content-wrap {
+    margin-bottom: 10px;
+    color: #777;
+    line-height: 24px;
 }
 
 
@@ -1267,6 +1276,7 @@ span.wbtm-details-page-list-label {
     .fields-li button{font-size: 14px;}
     .wbtm-search-result-list table thead th,
     .wbtm-search-result-list table td{font-size: 12px;padding:5px;}
+    .bus-thumb {height: 158px}
 }
 @media only screen and (max-width: 991px) {
     .search-fields .fields-li{width: 48%;float: left;margin: 0 2% 10px 0;}
@@ -1275,6 +1285,9 @@ span.wbtm-details-page-list-label {
 @media only screen and (max-width: 767px) {
     .search-fields .fields-li{width: 100%;float: left;margin: 0 0 10px 0;}
     .wbtm_next_days_tab{display: none;}
+    .bus-thumb {
+        height: 145px
+    }
 }
 
 

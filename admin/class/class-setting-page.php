@@ -32,7 +32,7 @@ $gen_settings = array(
                 array(
                    'id'		        => 'bus_buffer_time',
                    'title'		    =>  __( 'Buffer Time', 'bus-ticket-booking-with-seat-reservation' ),
-                   'details'	    => __( 'Please enter here car buffer time in Hour. By default is 0', 'bus-ticket-booking-with-seat-reservation' ),
+                   'details'	    => __( 'Please enter here car buffer time in Minute. By default is 0', 'bus-ticket-booking-with-seat-reservation' ),
                    'type'		    => 'text',
                    'default'		=> 0,
                    'placeholder'   => __('','bus-ticket-booking-with-seat-reservation'),
@@ -66,7 +66,7 @@ $seat_panel_settings = array(
                 array(
                     'id'		    => 'wbtm_seat_type_adult_label',
                     'title'		    => __('Adult Seat Type Label ','bus-ticket-booking-with-seat-reservation'),
-                    'detaile'		=> __('Please enter the lable of Adult Seat Type','bus-ticket-booking-with-seat-reservation'),
+                    'details'		=> __('Please enter the lable of Adult Seat Type','bus-ticket-booking-with-seat-reservation'),
                     'default'	=> 'Adult',
                     'type'		=> 'text',
                     'placeholder'   => __('Adult','bus-ticket-booking-with-seat-reservation'),
@@ -74,7 +74,7 @@ $seat_panel_settings = array(
                 array(
                     'id'		    => 'wbtm_seat_type_child_label',
                     'title'		    => __('Child Seat Type Label ','bus-ticket-booking-with-seat-reservation'),
-                    'detaile'		=> __('Please enter the lable of Child Seat Type','bus-ticket-booking-with-seat-reservation'),
+                    'details'		=> __('Please enter the lable of Child Seat Type','bus-ticket-booking-with-seat-reservation'),
                     'default'	=> 'Child',
                     'type'		=> 'text',
                     'placeholder'   => __('Child','bus-ticket-booking-with-seat-reservation'),
@@ -82,7 +82,7 @@ $seat_panel_settings = array(
                 array(
                     'id'		    => 'wbtm_seat_type_infant_label',
                     'title'		    => __('Infant Seat Type Label ','bus-ticket-booking-with-seat-reservation'),
-                    'detaile'		=> __('Please enter the lable of Infant Seat Type','bus-ticket-booking-with-seat-reservation'),
+                    'details'		=> __('Please enter the lable of Infant Seat Type','bus-ticket-booking-with-seat-reservation'),
                     'default'	=> 'Infant',
                     'type'		=> 'text',
                     'placeholder'   => __('Infant','bus-ticket-booking-with-seat-reservation'),
@@ -90,7 +90,7 @@ $seat_panel_settings = array(
                 array(
                     'id'		    => 'wbtm_seat_type_special_label',
                     'title'		    => __('Special Seat Type Label ','bus-ticket-booking-with-seat-reservation'),
-                    'detaile'		=> __('Please enter the lable of Special Seat Type','bus-ticket-booking-with-seat-reservation'),
+                    'details'		=> __('Please enter the lable of Special Seat Type','bus-ticket-booking-with-seat-reservation'),
                     'default'	=> 'Special',
                     'type'		=> 'text',
                     'placeholder'   => __('Special','bus-ticket-booking-with-seat-reservation'),
@@ -98,7 +98,6 @@ $seat_panel_settings = array(
  
                 array(
                     'id'		    => 'useer_deck_title',
-                    'title'		    => __('Upper Deck Title ','bus-ticket-booking-with-seat-reservation'),
                     'title'		    => __('Upper Deck Title ','bus-ticket-booking-with-seat-reservation'),
                     // 'placeholder'	=> 'https://i.imgur.com/GD3zKtz.png',
                     'type'		=> 'text',
@@ -121,8 +120,8 @@ $seat_panel_settings = array(
                 ),
                 array(
                     'id'		    => 'seat_active_image',
-                    'title'		    => __('Active Seat Image ','bus-ticket-booking-with-seat-reservation'),
-                    'details'	    => __('Active Seat Image ','bus-ticket-booking-with-seat-reservation'),
+                    'title'		    => __('Cart Seat Image ','bus-ticket-booking-with-seat-reservation'),
+                    'details'	    => __('Cart Seat Image ','bus-ticket-booking-with-seat-reservation'),
                     // 'placeholder'	=> 'https://i.imgur.com/GD3zKtz.png',
                     'type'		=> 'media',
                 ),

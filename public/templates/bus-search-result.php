@@ -121,7 +121,7 @@ $price_arr          = maybe_unserialize(get_post_meta(get_the_id(),'wbtm_bus_pri
                                 echo date($time_format, strtotime($bp_time)).' <i class="fa fa-long-arrow-right"></i> '.date($time_format, strtotime($dp_time));
                             ?>
                         <input type="hidden" value="<?php echo date($time_format, strtotime($bp_time)); ?>" name="user_start_time" id='user_start_time<?php echo get_the_id().$wbtmmain->wbtm_make_id($date); ?>'>
-                        <input type="hidden" name="bus_start_time" value="<?php echo date($time_format, strtotime($bp_time)); ?>" id='bus_start_time'>                            
+                        <input type="hidden" name="bus_start_time" value="<?php echo date($time_format, strtotime()); ?>" id='bus_start_time'>
                         </div>
                     </div>                                    
                 </div>

@@ -21,7 +21,9 @@ class WBTM_Plugin_Admin {
 	}
 	
 	function wbtm_ajax_call_url(){
-		wp_localize_script('jquery', 'wbtm_ajax', array( 'wbtm_ajaxurl' => admin_url( 'admin-ajax.php')));
+		wp_localize_script('wbtm_ajax_enq', 'wbtm_ajax', array( 'wbtm_ajaxurl' => admin_url( 'admin-ajax.php')));
+		wp_enqueue_script( 'wbtm_ajax_enq' );
+
 	}
 
 	public function enqueue_styles() {

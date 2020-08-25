@@ -3,9 +3,9 @@ add_action('wbtm_search_form', 'mage_bus_search_form_only');
 function mage_bus_search_form_only($single_bus,$target) {
     ?>
     <h4><?php mage_bus_label('wbtm_buy_ticket_text', __('BUY TICKET:','bus-ticket-booking-with-seat-reservation')); ?></h4>
-    <form action="<?php echo $single_bus ? '' : get_site_url() . '/'.$target.'/'; ?>" method="get" class="mage_form">
-        <div class="mage_form_list">
-            <div class="mage_input_select mage_bus_boarding_point">
+    <form action="<?php echo $single_bus ? '' : get_site_url() . '/'.$target.'/'; ?>" method="get" class="mage_form mage-responsive-form">
+        <div class="mage_form_list mage-pos-init">
+            <div class="mage_input_select mage_bus_boarding_point mage-pos-init">
                 <label>
                     <span class="fa fa-map-marker"><?php _e('From:','bus-ticket-booking-with-seat-reservation');?></span>
                     <input type="text" id='wbtm_starting_point_inupt' class="mage_form_control" name="bus_start_route" value="<?php echo mage_bus_isset('bus_start_route'); ?>" placeholder="<?php _e('Please Select','bus-ticket-booking-with-seat-reservation'); ?>" autocomplete="off" required />
@@ -13,14 +13,16 @@ function mage_bus_search_form_only($single_bus,$target) {
                 <?php mage_route_list($single_bus, true); ?>
             </div>
         </div>
-        <div class="mage_form_list">
-            <div class="mage_input_select mage_bus_dropping_point">
+        <div class="mage_form_list mage-pos-init">
+            <div class="mage_input_select mage_bus_dropping_point mage-pos-init">
                 <label>
                     <span class="fa fa-map-marker"><?php _e('To:','bus-ticket-booking-with-seat-reservation');?></span>
                     <span id='wbtm_show_msg'></span>
                     <input type="text" id='wbtm_dropping_point_inupt' class="mage_form_control" name="bus_end_route" value="<?php echo mage_bus_isset('bus_end_route'); ?>" placeholder="<?php _e('Please Select','bus-ticket-booking-with-seat-reservation'); ?>" autocomplete="off" required />
                 </label>
-                <ul class="mage_input_select_list" id='wbtm_dropping_point_list'></ul>
+                <div id='wbtm_dropping_point_list' class="mage_input_select_list">
+                    <ul></ul>
+                </div>
             </div>
         </div>
         <div class="mage_form_list">
@@ -35,26 +37,28 @@ function mage_bus_search_form_only($single_bus,$target) {
             ?>
             <div class="mage_form_list mage_return_date <?php echo $return ? '' : 'mage_hidden' ?>">
                 <label>
+                    
                     <span class="fa fa-calendar"><?php _e('Return Date (Optional):','bus-ticket-booking-with-seat-reservation');?></span>
-                    <input type="text" class="mage_form_control" id="r_date" name="r_date" value="<?php echo mage_bus_isset('r_date'); ?>" autocomplete="off" placeholder="<?php echo current_time(get_option( 'date_format' )); ?>" />
+                    <input type="text" class="mage_form_control" id="r_date" name="r_date" value="<?php echo mage_bus_isset('r_date'); ?>" autocomplete="off" />
                 </label>
             </div>
         <?php } ?>
         <div class="mage_form_list justifyBetween_column">
-            <div class="mage_group_input">
-                <?php if (!$single_bus) { ?>
+            <!-- <div class="mage_group_input">
+                <?php //if (!$single_bus) { ?>
                     <label for="one_way">
-                        <input type="radio" name="bus-r" value='oneway' id="one_way" <?php echo $return ? '' : 'checked' ?> />
-                        <?php _e('One Way','bus-ticket-booking-with-seat-reservation');  ?>
+                        <input type="radio" name="bus-r" value='oneway' id="one_way" <?php //echo $return ? '' : 'checked' ?> />
+                        <?php //_e('One Way','bus-ticket-booking-with-seat-reservation');  ?>
                     </label>
                     <label for="return">
-                        <input type="radio" name="bus-r" value='return' id="return" <?php echo $return ? 'checked' : '' ?>/>
-                        <?php _e('Return','bus-ticket-booking-with-seat-reservation');  ?>
+                        <input type="radio" name="bus-r" value='return' id="return" <?php //echo $return ? 'checked' : '' ?>/>
+                        <?php //_e('Return','bus-ticket-booking-with-seat-reservation');  ?>
                     </label>
-                <?php } ?>
-            </div>
+                <?php //} ?>
+            </div> -->
+            <label for="" style="visibility:hidden">None</label>
             <div class="mage_form_search">
-                <button id='mage_bus_search_button' type="submit" class="mage_button">
+                <button id='mage_bus_search_button' type="submit" class="mage_button_search">
                     <span class="fa fa-search"></span>
                     <?php _e('Search','bus-ticket-booking-with-seat-reservation'); ?>
                 </button>

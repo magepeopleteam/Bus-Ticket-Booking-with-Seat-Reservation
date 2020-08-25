@@ -6,8 +6,8 @@ form.mage_bus_info_form {display: none;}
 .mage_bus_item {border-bottom: 1px solid var(--default-border-color);padding: var(--default-mp-xs) 0;}
 div.mage_bus_list_title h6,
 div.mage_bus_item h6 {padding: 0 0 0 var(--default-mp-xs);}
-.mage_bus_list_title {background-color: #0a4b78;padding: 10px 0;}
-div.mage_bus_list_title h6 {color: #fff !important;}
+.mage_bus_list_title {background-color: #0A4B78;padding: 10px 0;}
+div.mage_bus_list_title h6 {color: #FFF !important;}
 .mage_bus_img {width: 100px;}
 div.mage_bus_img img {width: 100%;height: auto;border: 1px solid var(--default-border-color);padding: 2px;}
 div.mage_bus_list_title div.mage_bus_img h6 {border: none;}
@@ -22,8 +22,9 @@ div.mage_bus_info h6 span {font-size: 12px !important;}
 .mage_bus_selected_list {border-bottom: 1px solid var(--default-border-color);}
 /*********/
 .mage_bus_seat_item,
-.mage_bus_seat_unselect {cursor: pointer;}
-.mage_bus_seat_item.mage_selected span,
+.mage_bus_seat_unselect {cursor: pointer;padding:2px;}
+.mage_bus_seat_item.mage_selected span.mage_bus_seat_icon,
+.mage_bus_seat_item.mage_selected span.bus_handle,
 .mage_bus_seat_item.mage_selected span::before,
 .mage_bus_seat_item.mage_selected span::after {
     background-color: var(--seat-selected-bg-color) !important;
@@ -65,7 +66,7 @@ div.mage_hidden_customer_info_form {display: none !important;}
 .mage_customer_info_area label {width: calc(50% - 8px);}
 .mage_form_list_body {padding: var(--default-mp);}
 .mage_customer_info_area .mage_title {
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
     padding: var(--default-mp-xs);
     text-align: center;
 }
@@ -77,9 +78,95 @@ form.mage_bus_info_form {
     margin: var(--default-mp) 0 0 0 !important;
     border-top: 1px solid var(--default-border-color);
 }
-div.mage_bus_in_cart .mage_bus_info h6 {color: #2ca41b;}
+div.mage_bus_in_cart .mage_bus_info h6 {color: #2CA41B;}
 /****************/
 .mage_single_bus_search_page .mage_bus_seat_details {display: block;}
 .mage_bus_details_short {border-right: 1px dashed var(--default-border-color);}
 .mage_bus_seat_list {padding: 0 0 0 15px;}
-.mage_bus_drop_board>div:last-child{margin: 0 0 0 15px;}
+.mage_bus_drop_board > div:last-child {margin: 0 0 0 15px;}
+/******************/
+.passenger_type_list {
+    position: absolute;
+    display: none;
+    left: 0;
+    background-color: #F2F2F2;
+    z-index: 111;
+    right: 0;
+    top: calc(100% - 4px);
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    padding: 7px 10px;
+}
+.passenger_type_list li {padding: 5px;border-bottom: 1px dotted #DDD;cursor: pointer;}
+.passenger_type_list li:hover{background-color: #0A4B78;color:#fff;}
+.mage_bus_seat {position: relative;}
+.mage_bus_seat_item:hover .passenger_type_list {display: block;}
+[class^='mage'] span.woocommerce-Price-currencySymbol{margin:0 !important;}
+.mage_bus_seat_item p{text-align:center;}
+[class^='mage'] img.driver_img{max-width:60px;}
+
+[class^="mage"] .mage_form_list label span{margin:0 0 7px 0 !important;}
+[class^="mage"] .mage_form_list label span::before{margin:0 7px 0 0;}
+#wbtm_show_msg {position: absolute;top: 0px;right: 0;margin-bottom: 0 !important;line-height: .7em;color:#FFC107}
+.fusion-main-menu .fusion-dropdown-menu {overflow: initial!important;}
+.mage-pos-init {
+    position: initial!important;
+}
+.mage_input_select_list {
+    display: none;
+    max-width: 99%;
+    position: absolute;
+    left: 0;
+    top: 103%;
+    right: 0;
+    margin: 0 auto;
+    z-index: 9999;
+}
+#wbtm_dropping_point_list {
+    position: absolute;
+    width: 99%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 9999;
+}
+.mage_input_select_list > ul {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px !important;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.mage_input_select_list > ul > li {
+    flex-basis: 25%;
+    padding: 10px;
+}
+.ui-datepicker {
+    z-index: 99999!important;
+}
+.no-bus-found {
+    text-align: center;
+    color: #F44336!important;
+    font-weight: 700;
+    padding: 10px 0!important;
+}
+
+@media (max-width: 1050px) {
+    #wbtm_dropping_point_list {
+        top: 67px;
+    }
+
+    .mage_input_select_list {
+        top: 67px;
+    }
+
+    .mage_input_select_list>ul>li {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 600px) {
+    #wbtm_dropping_point_list {
+        top: 133px;
+    }
+}

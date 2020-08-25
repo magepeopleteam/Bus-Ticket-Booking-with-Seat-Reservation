@@ -210,7 +210,7 @@ if( ! class_exists( 'AddMetaBox' ) ) {
                                             foreach ($section['options'] as $option):
                                                 ?>
                                                 <tr>
-                                                    <th scope="row"><?php echo $option['title']; ?></th>
+                                                    <th scope="row"><?php echo (isset($option['title']) ? $option['title'] : ''); ?></th>
                                                     <td>
                                                         <?php
 

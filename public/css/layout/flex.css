@@ -11,6 +11,7 @@ div.mage_row,
 [class*='mage'] label,
 div.mage_group_input,
 [class^='mage'] button[class*='mage_button'],
+[class*='defaultLoaderFixed'],
 div.mage_slide_indicator_area,
 div.mage_form_inline form.mage_form,
 ul.mage-list-double{
@@ -26,12 +27,14 @@ ul.mage-list-double{
 [class*="mage_qty"],
 [class*='mage'] label,
 [class^='mage'] button[class*='mage_button'],
+[class*='defaultLoaderFixed'],
 div.mage_slide_indicator_area{-webkit-align-items: center;align-items: center;}
 
 [class*='flexCenter'],
 [class*='justifyCenter'],
 [class*="mage_qty"],
 [class^='mage'] button[class*='mage_button'],
+[class*='defaultLoaderFixed'],
 div.mage_slide_indicator_area{-webkit-justify-content: center;justify-content: center;}
 
 [class*='justifyBetween']{-webkit-justify-content: space-between;justify-content: space-between;}
@@ -39,5 +42,3 @@ div.mage_slide_indicator_area{-webkit-justify-content: center;justify-content: c
 [class*='justifyAround']{-webkit-justify-content: space-around;justify-content: space-around;}
 
 [class*='column']{-webkit-flex-flow: column;flex-flow: column;}
-
-.mage_form_inline .mage_form_list{-webkit-flex-basis: 100%;flex-basis: 100%;}

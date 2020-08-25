@@ -39,6 +39,8 @@ class WBTM_Tax{
 			'update_count_callback' => '_update_post_term_count',
 			'query_var'             => true,
 			'rewrite'               => array( 'slug' => 'bus-category' ),
+			'show_in_rest'          => true,
+			'rest_base'             => 'bus_cat',				
 		);
 	register_taxonomy('wbtm_bus_cat', 'wbtm_bus', $args);
 	
@@ -82,6 +84,8 @@ class WBTM_Tax{
 			'update_count_callback' => '_update_post_term_count',
 			'query_var'             => true,
 			'rewrite'               => array( 'slug' => 'bus-stops' ),
+			'show_in_rest'          => true,
+			'rest_base'             => 'bus_stops',				
 		);
 	register_taxonomy('wbtm_bus_stops', 'wbtm_bus', $bus_stops_args);
 	

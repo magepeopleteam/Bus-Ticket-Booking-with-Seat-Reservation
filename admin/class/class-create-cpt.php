@@ -43,7 +43,9 @@ class WBTM_Cpt{
 	        'labels'                => $labels,
 	        'menu_icon'             => 'dashicons-slides',
 	        'supports'              => array('title','editor','thumbnail'),
-	        'rewrite'               => array('slug' => 'bus')
+			'rewrite'               => array('slug' => 'bus'),
+			'show_in_rest'          => true,
+			'rest_base'             => 'wbtm_bus',			
 
 	    );
 	   	 register_post_type( 'wbtm_bus', $args );
