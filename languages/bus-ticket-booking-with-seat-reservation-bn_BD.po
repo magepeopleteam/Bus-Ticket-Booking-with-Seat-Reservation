@@ -1,0 +1,432 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bus-seat-plugin-bn\n"
+"POT-Creation-Date: 2018-12-12 15:23+0600\n"
+"PO-Revision-Date: 2018-12-12 15:27+0600\n"
+"Last-Translator: \n"
+"Language-Team: magepeopleteam\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/wbtm_bus_ticket_meta.php:218 inc/wbtm_bus_ticket_meta.php:232
+#: inc/wbtm_bus_ticket_meta.php:263 inc/wbtm_bus_ticket_meta.php:277
+#: inc/wbtm_bus_ticket_meta.php:357 inc/wbtm_bus_ticket_meta.php:372
+#: inc/wbtm_shortcode.php:330 inc/wbtm_shortcode.php:778 templates/single-bus.php:249
+msgid "Remove"
+msgstr "মুছে ফেলুন"
+
+#: inc/wbtm_bus_ticket_meta.php:236
+msgid "Add More Boarding Point"
+msgstr "আরো বাস শুরুর স্টেশন যোগ করুন"
+
+#: inc/wbtm_bus_ticket_meta.php:250 inc/wbtm_bus_ticket_meta.php:340
+msgid "Dropping Point"
+msgstr "নেমে যাবার স্টেশন"
+
+#: inc/wbtm_bus_ticket_meta.php:251
+msgid "Time"
+msgstr "সময়"
+
+#: inc/wbtm_bus_ticket_meta.php:281
+msgid "Add More Droping Point"
+msgstr "আরো নেমে যাবার স্টেশন যোগ করুন"
+
+#: inc/wbtm_bus_ticket_meta.php:285
+msgid "Don't Show Boarding and Dropping Points in Details Page."
+msgstr "শুরু এবং শেষ এর স্টেশন তালিকা বিস্তারিত পাতা দেখাবে না."
+
+#: inc/wbtm_bus_ticket_meta.php:339 templates/single-bus.php:97
+msgid "Boarding Point"
+msgstr "যাত্রা শুরুর শ্টেশন"
+
+#: inc/wbtm_bus_ticket_meta.php:341 inc/wbtm_shortcode.php:329
+#: inc/wbtm_shortcode.php:777 templates/single-bus.php:248
+msgid "Fare"
+msgstr "ভাড়া"
+
+#: inc/wbtm_bus_ticket_meta.php:376
+msgid "Add More Price"
+msgstr "আরো ভাড়া যোগ করুন"
+
+#: inc/wbtm_bus_ticket_meta.php:604
+msgid "Sunday"
+msgstr "রবিবার"
+
+#: inc/wbtm_bus_ticket_meta.php:607
+msgid "Monday"
+msgstr "সোমবার"
+
+#: inc/wbtm_bus_ticket_meta.php:610
+msgid "Tuesday"
+msgstr "মঙ্গলবার"
+
+#: inc/wbtm_bus_ticket_meta.php:613
+msgid "Wednesday"
+msgstr "বুধবার"
+
+#: inc/wbtm_bus_ticket_meta.php:616
+msgid "Thursday"
+msgstr "বৃহসপতিবার"
+
+#: inc/wbtm_bus_ticket_meta.php:619
+msgid "Friday"
+msgstr "শুক্রবার"
+
+#: inc/wbtm_bus_ticket_meta.php:622
+msgid "Saturday"
+msgstr "শনিবার"
+
+#: inc/wbtm_cpt.php:10 inc/wbtm_cpt.php:11
+msgid "Bus"
+msgstr "বাস"
+
+#: inc/wbtm_cpt.php:12 inc/wbtm_cpt.php:13
+msgid "Bus List"
+msgstr "বাসের তালিকা"
+
+#: inc/wbtm_cpt.php:14
+msgid "Bus Item:"
+msgstr "বাস সমূহ:"
+
+#: inc/wbtm_cpt.php:15
+msgid "All Bus"
+msgstr "সব বাস"
+
+#: inc/wbtm_cpt.php:16 inc/wbtm_cpt.php:17
+msgid "Add New Bus"
+msgstr "নতুন বাস যোগ করুন"
+
+#: inc/wbtm_cpt.php:18
+msgid "New Bus"
+msgstr "নতুন বাস"
+
+#: inc/wbtm_cpt.php:19
+msgid "Edit Bus"
+msgstr "বাস পরিবর্তন করুন"
+
+#: inc/wbtm_cpt.php:20
+msgid "Update Bus"
+msgstr "বাস হালনাগাদ করুন"
+
+#: inc/wbtm_cpt.php:21 inc/wbtm_cpt.php:22
+msgid "View Bus"
+msgstr "বাস দেখুন"
+
+#: inc/wbtm_cpt.php:23
+msgid "Search Bus"
+msgstr "বাস খুজুন"
+
+#: inc/wbtm_cpt.php:24
+msgid "Bus Not found"
+msgstr "কোন বাস খুজে পাওয়া যায় নাই"
+
+#: inc/wbtm_cpt.php:25
+msgid "Bus Not found in Trash"
+msgstr "ট্রাশে কোন বাস নেই"
+
+#: inc/wbtm_cpt.php:26
+msgid "Bus Feature Image"
+msgstr "বাস এর ফিচার ছবি"
+
+#: inc/wbtm_cpt.php:27
+msgid "Set Bus featured image"
+msgstr "বাস এর ফিচার ছবি যুক্ত করুন"
+
+#: inc/wbtm_cpt.php:28
+msgid "Remove Bus featured image"
+msgstr "বাস এর ফিচার ছবি মুছে ফেলুন"
+
+#: inc/wbtm_cpt.php:29
+msgid "Use as Bus featured image"
+msgstr "বাস এর ফিচার ছবি হিসেবে ব্যবহার করুন"
+
+#: inc/wbtm_cpt.php:30
+msgid "Insert into Bus"
+msgstr "বাস এ যুক্ত করুন"
+
+#: inc/wbtm_cpt.php:31
+msgid "Uploaded to this Bus"
+msgstr "এটা বাস এ যুক্ত করুন"
+
+#: inc/wbtm_cpt.php:32
+msgid "Bus list"
+msgstr "বাস এর তালিকা"
+
+#: inc/wbtm_cpt.php:33
+msgid "Bus list navigation"
+msgstr "বাস এর তালিক নেভিগেশন"
+
+#: inc/wbtm_cpt.php:34
+msgid "Filter Bus list"
+msgstr "বাস এর তালিকা ফিল্টার করুন"
+
+#: inc/wbtm_extra_price.php:141
+msgid "Journey Date:"
+msgstr "যাত্রার তারিখ:"
+
+#: inc/wbtm_extra_price.php:142
+msgid "Journey Time:"
+msgstr "যাত্রার সময়:"
+
+#: inc/wbtm_extra_price.php:143
+msgid "Boarding Point:"
+msgstr "শুরুর স্টেশন:"
+
+#: inc/wbtm_extra_price.php:144
+msgid "Dropping Point:"
+msgstr "নেমে যাবার শ্টেশন:"
+
+#: inc/wbtm_shortcode.php:61 templates/taxonomy-organozer.php:41
+msgid "Type:"
+msgstr "ধরন:"
+
+#: inc/wbtm_shortcode.php:62 templates/single-bus.php:40
+#: templates/taxonomy-organozer.php:42
+msgid "Bus No:"
+msgstr "বাস এর নাম্বার:"
+
+#: inc/wbtm_shortcode.php:63 templates/taxonomy-organozer.php:44
+msgid "Start From:"
+msgstr "শুরু করবেন:"
+
+#: inc/wbtm_shortcode.php:64 templates/taxonomy-organozer.php:45
+msgid "End at:"
+msgstr "শেষ করবেন:"
+
+#: inc/wbtm_shortcode.php:65 templates/taxonomy-organozer.php:46
+msgid "Fare:"
+msgstr "ভাড়া:"
+
+#: inc/wbtm_shortcode.php:67 inc/wbtm_shortcode.php:340 inc/wbtm_shortcode.php:788
+#: templates/single-bus.php:259 templates/taxonomy-category.php:48
+#: templates/taxonomy-organozer.php:48
+msgid "Book Now"
+msgstr "এখনি বুকিং করুন"
+
+#: inc/wbtm_shortcode.php:120 inc/wbtm_shortcode.php:298 inc/wbtm_shortcode.php:589
+#: inc/wbtm_shortcode.php:746 templates/single-bus.php:215
+msgid "Route"
+msgstr "যাত্রাপথ"
+
+#: inc/wbtm_shortcode.php:121 inc/wbtm_shortcode.php:590
+msgid "Date:"
+msgstr "তারিখ:"
+
+#: inc/wbtm_shortcode.php:127 inc/wbtm_shortcode.php:532 inc/wbtm_shortcode.php:597
+#: inc/wbtm_shortcode.php:975
+msgid "DEPARTING"
+msgstr "ছেড়ে যাবে"
+
+#: inc/wbtm_shortcode.php:128 inc/wbtm_shortcode.php:536 inc/wbtm_shortcode.php:598
+#: inc/wbtm_shortcode.php:979
+msgid "COACH NO"
+msgstr "কোচ নাম্বর"
+
+#: inc/wbtm_shortcode.php:129 inc/wbtm_shortcode.php:540 inc/wbtm_shortcode.php:599
+#: inc/wbtm_shortcode.php:983
+msgid "STARTING"
+msgstr "শুরু হবে"
+
+#: inc/wbtm_shortcode.php:130 inc/wbtm_shortcode.php:544 inc/wbtm_shortcode.php:600
+#: inc/wbtm_shortcode.php:987
+msgid "END"
+msgstr "শেষ"
+
+#: inc/wbtm_shortcode.php:131 inc/wbtm_shortcode.php:548 inc/wbtm_shortcode.php:601
+#: inc/wbtm_shortcode.php:991
+msgid "FARE"
+msgstr "ভাড়া"
+
+#: inc/wbtm_shortcode.php:132 inc/wbtm_shortcode.php:552 inc/wbtm_shortcode.php:602
+#: inc/wbtm_shortcode.php:995
+msgid "TYPE"
+msgstr "ধরন"
+
+#: inc/wbtm_shortcode.php:133 inc/wbtm_shortcode.php:556 inc/wbtm_shortcode.php:603
+#: inc/wbtm_shortcode.php:999
+msgid "ARRIVAL"
+msgstr "পৌছাবে"
+
+#: inc/wbtm_shortcode.php:134 inc/wbtm_shortcode.php:560 inc/wbtm_shortcode.php:604
+#: inc/wbtm_shortcode.php:1003
+msgid "SEATS AVAILABLE"
+msgstr "আসন খালি আছে"
+
+#: inc/wbtm_shortcode.php:135 inc/wbtm_shortcode.php:605
+msgid "VIEW"
+msgstr "দেখুন"
+
+#: inc/wbtm_shortcode.php:202
+msgid "View Seats"
+msgstr "সিট সমূহ দেখুন"
+
+#: inc/wbtm_shortcode.php:311 inc/wbtm_shortcode.php:759 templates/single-bus.php:230
+msgid "Start & Arrival Time"
+msgstr "শুরু এবং পৌছানোর সময়"
+
+#: inc/wbtm_shortcode.php:328 inc/wbtm_shortcode.php:776 templates/single-bus.php:247
+msgid "Seat No"
+msgstr "সিট নাম্বার"
+
+#: inc/wbtm_shortcode.php:333 inc/wbtm_shortcode.php:781 templates/single-bus.php:252
+msgid "Total"
+msgstr "সর্বমোট"
+
+#: inc/wbtm_shortcode.php:528 inc/wbtm_shortcode.php:596 inc/wbtm_shortcode.php:971
+msgid "Bus Name"
+msgstr "বাস এর নাম"
+
+#: inc/wbtm_shortcode.php:564 inc/wbtm_shortcode.php:1007
+msgid "View"
+msgstr "দেখুন"
+
+#: inc/wbtm_shortcode.php:753 templates/single-bus.php:223
+msgid "Date"
+msgstr "তারিখ"
+
+#: inc/wbtm_tax.php:9
+msgid "Category"
+msgstr "বিভাগ"
+
+#: inc/wbtm_tax.php:10
+msgid "All Bus Category"
+msgstr "সকল বাস এর বিভাগ"
+
+#: inc/wbtm_tax.php:11
+msgid "Parent Category"
+msgstr "প্য্যারেন্ট বিভাগ"
+
+#: inc/wbtm_tax.php:12
+msgid "Parent Category:"
+msgstr "প্য্যারেন্ট বিভাগ:"
+
+#: inc/wbtm_tax.php:13
+msgid "New Category Name"
+msgstr "নতুন বিভাগের নাম"
+
+#: inc/wbtm_tax.php:14
+msgid "Add New Category"
+msgstr "নতুন বিভাগের নাম যুক্ত করুন"
+
+#: inc/wbtm_tax.php:15
+msgid "Edit Category"
+msgstr "বিভাগ পরিবর্তন করুন"
+
+#: inc/wbtm_tax.php:16
+msgid "Update Category"
+msgstr "বিভাগ হালনাগাদ করুন"
+
+#: inc/wbtm_tax.php:17
+msgid "View Category"
+msgstr "বিভাগটি দেখুন"
+
+#: inc/wbtm_tax.php:18
+msgid "Separate Category with commas"
+msgstr "কমা দিয়ে একটি বিভাগ থেকে অন্যটি আলাদা করুন"
+
+#: inc/wbtm_tax.php:19
+msgid "Add or remove Category"
+msgstr "বিভাগ যুক্ত অথবা মুছুন"
+
+#: inc/wbtm_tax.php:20
+msgid "Choose from the most used"
+msgstr "সর্বাধিক ব্যবহৃত হতে নির্বাচন করুন"
+
+#: inc/wbtm_tax.php:21
+msgid "Popular Category"
+msgstr "জনপ্রিয় বিভাগ"
+
+#: inc/wbtm_tax.php:22
+msgid "Search Category"
+msgstr "বিভাগ খুজুন"
+
+#: inc/wbtm_tax.php:23
+msgid "Not Found"
+msgstr "খুজে পাওয়া যায় নাই"
+
+#: inc/wbtm_tax.php:24
+msgid "No Category"
+msgstr "কোন বিভাগ নেই"
+
+#: inc/wbtm_tax.php:25
+msgid "Category list"
+msgstr "বিভাগ এর তালিকা"
+
+#: inc/wbtm_tax.php:26
+msgid "Category list navigation"
+msgstr "বিভাগ এর নেভিগেশন"
+
+#: templates/single-bus.php:41 templates/taxonomy-organozer.php:43
+msgid "Total Seat:"
+msgstr "সর্বমোট সিট:"
+
+#: templates/single-bus.php:47
+msgid "Boarding Points"
+msgstr "শুরুর স্টেশন"
+
+#: templates/single-bus.php:61
+msgid "Dropping Points"
+msgstr "শেষ স্টেশন"
+
+#: templates/single-bus.php:99
+msgid "Select Boarding Point"
+msgstr "শুরুর স্টেশন নির্বাচন করুন"
+
+#: templates/single-bus.php:113
+msgid "Drop Off Point"
+msgstr "শেষ স্টেশন"
+
+#: templates/single-bus.php:115
+msgid "Select Drop Off Point"
+msgstr "শেষ স্টেশন নির্বাচন করুন"
+
+#: templates/single-bus.php:129
+msgid "Select Journey Date"
+msgstr "যাত্রার তারিখ নির্বাচন করুন"
+
+#: templates/single-bus.php:134
+msgid "Search"
+msgstr "খুজুন"
+
+#: woocommerce-bus.php:195
+msgid "Invalid product."
+msgstr "অবৈধ বাস."
+
+#: woocommerce-bus.php:471 woocommerce-bus.php:506
+msgid "Please Select"
+msgstr "অনুগ্রহ করে একটি নির্বাচন করুন"
+
+#: woocommerce-bus.php:565
+msgid "Form"
+msgstr "হইতে"
+
+#: woocommerce-bus.php:570
+msgid "To:"
+msgstr "পর্যন্ত:"
+
+#: woocommerce-bus.php:576
+msgid "Date of Journey:"
+msgstr "যাত্রার তারিখ:"
+
+#: woocommerce-bus.php:582
+msgid "Return Date:"
+msgstr "ফেরার তারিখ:"
+
+#: woocommerce-bus.php:586
+msgid "Search Buses"
+msgstr "আপনার বাস খুজুন"
+
+#: woocommerce-bus.php:825
+msgid ""
+"Bus Ticket Booking with Seat Reservation Plugin is Dependent on WooCommerce, But "
+"currently WooCommerce is not Active. Please Active WooCommerce plugin first"
+msgstr ""
+"বাস টিকেট ও সিট রিজার্ভেশন বুকিং প্লাগিনটি সম্পূর্ণ উকর্মাস প্লাগিন এর উপর নির্ভরশীল, সুতরাং "
+"দয়া করি সর্বপ্রথম উকর্মাস প্লাগিনটি ইন্সটল এবং একটিভ করে নিন, ধন্যবাদ"

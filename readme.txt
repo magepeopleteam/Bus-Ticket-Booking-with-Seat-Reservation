@@ -287,3 +287,13 @@ Yes We like to hear from our customer, If you want to add any customization or y
 ==> Mobile seat selection feature now availabe in search page
 ==> Removed past date from the Operational on day list in the bus details page
 . - 21 Aug 2019*
+
+= 2.0 =
+* Update List:
+==> This is a Big update, we suggest you to backup your date before update to this Version
+==> New UI
+==> Ajax search field load
+==> Improved Performance
+==> Double Decker seat plan added
+==> Many bug fixed
+. - 24 Aug 2020*

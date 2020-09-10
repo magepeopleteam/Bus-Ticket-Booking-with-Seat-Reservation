@@ -37,17 +37,48 @@ function mage_check_search_day_off($id, $j_date) {
 }
 
 // convert date formate
+// function mage_convert_date_format($date, $format) {
+//     $wp_date_format = get_option('date_format');
+//     if(strpos($wp_date_format, ' ') || strpos($wp_date_format, ',')) {
+//         $wp_date_format = 'Y-m-d';
+//     } else {
+//         $wp_date_format = str_replace('/', '-', $wp_date_format);
+//     }
+    
+//     $myDateTime = date_create_from_format($wp_date_format, $date);
+//     $final = date_format($myDateTime, 'Y-m-d');
+//     return $final;
+// }
+
+// convert date formate
 function mage_convert_date_format($date, $format) {
-    $wp_date_format = get_option('date_format');
-    if(strpos($wp_date_format, ' ') || strpos($wp_date_format, ',')) {
-        $wp_date_format = 'Y-m-d';
-    } else {
-        $wp_date_format = str_replace('/', '-', $wp_date_format);
+    $setting_format = get_option('date_format');
+
+    if(!$date) {
+        return null;
     }
     
-    $myDateTime = date_create_from_format($wp_date_format, $date);
-    $final = date_format($myDateTime, 'Y-m-d');
-    return $final;
+    if( preg_match('/\s/',$setting_format) ) {
+
+        return date($format, strtotime($date));
+
+    } else {
+        $setting_format__dashed = str_replace('/', '-', $setting_format);
+        $setting_format__dashed = str_replace('.', '-', $setting_format__dashed);
+
+        $dash_date = str_replace('/', '-', $date);
+        $dash_date = str_replace('.', '-', $dash_date);
+        // echo $setting_format__dashed.'<br>';
+        // echo $dash_date.'<br>';
+        $date_f = DateTime::createFromFormat($setting_format__dashed , $dash_date);
+        if($date_f) {
+            $res = $date_f->format($format);
+            return $res;
+        } else {
+            return null;
+        }
+        
+    }
 }
 
 // check bus on Date
@@ -132,11 +163,12 @@ function mage_search_bus_query($return) {
 function mage_bus_title() {
     ?>
     <div class="mage_flex_mediumRadiusTop mage_bus_list_title ">
-        <div class="mage_bus_img flexCenter"><h6><?php _e('Image', 'bus-ticket-booking-with-seat-reservation'); ?></h6></div>
+        <div class="mage_bus_img flexCenter"><h6><?php mage_bus_label('wbtm_image_text', __('Image', 'bus-ticket-booking-with-seat-reservation'));        
+        ?></h6></div>
         <div class="mage_bus_info flexEqual flexCenter">
             <div class="flexEqual">
                 <h6><?php mage_bus_label('wbtm_bus_name_text', __('Bus', 'bus-ticket-booking-with-seat-reservation')); ?></h6>
-                <h6 class="mage_hidden_xxs"><?php _e('Schedule', 'bus-ticket-booking-with-seat-reservation'); ?></h6>
+                <h6 class="mage_hidden_xxs"><?php  mage_bus_label('wbtm_schedule_text', __('Schedule', 'bus-ticket-booking-with-seat-reservation'));  ?></h6>
             </div>
             <div class="flexEqual flexCenter textCenter">
                 <h6 class="mage_hidden_xxs"><?php mage_bus_label('wbtm_type_text', __('Coach Type', 'bus-ticket-booking-with-seat-reservation')); ?></h6>
@@ -347,6 +379,19 @@ function mage_bus_sold_seat($return) {
 //seat price
 function mage_bus_seat_price($bus_id,$start, $end, $dd, $seat_type = null) {
     $price_arr = maybe_unserialize(get_post_meta($bus_id, 'wbtm_bus_prices', true));
+    
+    // Check this route has price if not, return
+    if(!empty($price_arr) && is_array($price_arr)) {
+        // $price_arr = array_values($price_arr);
+        foreach($price_arr as $value) {
+            if( ($value['wbtm_bus_bp_price_stop'] == $start) && ($value['wbtm_bus_dp_price_stop'] == $end) && ($value['wbtm_bus_price'] == 0 || $value['wbtm_bus_price'] == null) ) {
+                return false;
+            }
+        }
+    } else {
+        return false;
+    }
+    
     $seat_dd_increase = (int)get_post_meta($bus_id, 'wbtm_seat_dd_price_parcent', true);
     $dd_price_increase = ($dd && $seat_dd_increase) ? $seat_dd_increase : 0;
     foreach ($price_arr as $key => $val) {
@@ -502,7 +547,7 @@ function mage_bus_seat_status($field_name, $return) {
     $bus_id = get_the_id();
     $args = array(
         'post_type' => 'wbtm_bus_booking',
-        'posts_per_page' => -1,
+        'posts_per_page' => 1,
         'meta_query' => array(
             'relation' => 'AND',
             array(
@@ -544,9 +589,76 @@ function mage_bus_seat_status($field_name, $return) {
         ),
     );
     $q = new WP_Query($args);
-    // $booking_id = $q->posts[0]->ID;
     $booking_id = ( isset($q->posts[0]) ? $q->posts[0]->ID : null );
+    // return $booking_id;
     return get_post_meta($booking_id, 'wbtm_status', true) ? get_post_meta($booking_id, 'wbtm_status', true) : 0;
+}
+
+// Get seat Booking Data
+function get_seat_booking_data($seat_name, $return) {
+    if(!$seat_name) {
+        return false;
+    }
+    $date = $return ? wbtm_convert_date_to_php(mage_bus_isset('r_date')) : wbtm_convert_date_to_php(mage_bus_isset('j_date'));
+    $start = $return ? mage_bus_isset('bus_end_route') : mage_bus_isset('bus_start_route');
+    $end = $return ? mage_bus_isset('bus_start_route') : mage_bus_isset('bus_end_route');
+    $bus_id = get_the_id();
+    $args = array(
+        'post_type' => 'wbtm_bus_booking',
+        'posts_per_page' => 1,
+        'meta_query' => array(
+            'relation' => 'AND',
+            array(
+                'relation' => 'AND',
+                array(
+                    'key' => 'wbtm_seat',
+                    'value' => $seat_name,
+                    'compare' => '='
+                ),
+                array(
+                    'key' => 'wbtm_journey_date',
+                    'value' => $date,
+                    'compare' => '='
+                ),
+                array(
+                    'key' => 'wbtm_bus_id',
+                    'value' => $bus_id,
+                    'compare' => '='
+                ),
+            ),
+            array(
+                'relation' => 'OR',
+                array(
+                    'key' => 'wbtm_boarding_point',
+                    'value' => $start,
+                    'compare' => 'LIKE'
+                ),
+                array(
+                    'key' => 'wbtm_next_stops',
+                    'value' => $start,
+                    'compare' => 'LIKE'
+                ),
+                array(
+                    'key' => 'wbtm_next_stops',
+                    'value' => $end,
+                    'compare' => 'LIKE'
+                ),
+            )
+        ),
+    );
+    $q = new WP_Query($args);
+    $booking_id = ( isset($q->posts[0]) ? $q->posts[0]->ID : null );
+    // return $booking_id;
+    if($booking_id) {
+        $data = array(
+            'status'            => get_post_meta($booking_id, 'wbtm_status', true),
+            'boarding_point'    => get_post_meta($booking_id, 'wbtm_boarding_point', true),
+            'dropping_point'    => get_post_meta($booking_id, 'wbtm_droping_point', true),
+        );
+        return $data;
+    } else {
+        return false;
+    }
 }
 
 //find seat Droping Point

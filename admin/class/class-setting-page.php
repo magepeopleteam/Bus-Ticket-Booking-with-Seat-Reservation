@@ -164,6 +164,7 @@ $translation_settings = array(
                     'type' => 'text',
                     'default' => 'BUY TICKET'
                 ),
+
                 array(
                     'id' => 'wbtm_from_text',
                     'title' => __( 'From', 'bus-ticket-booking-with-seat-reservation' ),
@@ -218,6 +219,30 @@ $translation_settings = array(
                     'type' => 'text',
                     'default' => 'SEARCH BUSES'
                 ),
+    
+              array(
+                    'id' => 'wbtm_please_select_text',
+                    'title' => __( 'Please Select', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Please Select button form page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Please Select'
+                ),
+    
+              array(
+                    'id' => 'wbtm_no_bus_found_text',
+                    'title' => __( 'No Bus Found!', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as No Bus Found!.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'No Bus Found!'
+                ),
+    
+              array(
+                    'id' => 'wbtm_already_in_cart_text',
+                    'title' => __( 'Already Added in cart !', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Already Added in cart !.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Already Added in cart !'
+                ),
                 array(
                     'id' => 'wbtm_route_text',
                     'title' => __( 'Route', 'bus-ticket-booking-with-seat-reservation' ),
@@ -231,6 +256,13 @@ $translation_settings = array(
                     'details' =>__( 'Enter the text which you want to display as Date Search Result Page.', 'bus-ticket-booking-with-seat-reservation' ),
                     'type' => 'text',
                     'default' => 'Date:'
+                ),
+                array(
+                    'id' => 'wbtm_start_time_text',
+                    'title' => __( 'Start Time:', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Start Time.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Start Time:'
                 ),
                 array(
                     'id' => 'wbtm_bus_name_text',
@@ -282,6 +314,20 @@ $translation_settings = array(
                     'default' => 'TYPE'
                 ),
                  array(
+                    'id' => 'wbtm_passenger_capacity_text',
+                    'title' => __( 'Passenger Capacity :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Passenger Capacity :.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Passenger Capacity :'
+                ),
+                 array(
+                    'id' => 'wbtm_bus_not_availabe_text',
+                    'title' => __( 'Bus not availabe in this date :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Bus not availabe in this date.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Uhu! No Cheating, This bus available only in the particular date. :)'
+                ),
+                 array(
                     'id' => 'wbtm_arrival_text',
                     'title' => __( 'ARRIVAL', 'bus-ticket-booking-with-seat-reservation' ),
                     'details' =>__( 'Enter the text which you want to display as ARRIVAL Search Result Page.', 'bus-ticket-booking-with-seat-reservation' ),
@@ -324,6 +370,77 @@ $translation_settings = array(
                     'details' =>__( 'Enter the text which you want to display as Seat No Details Page.', 'bus-ticket-booking-with-seat-reservation' ),
                     'type' => 'text',
                     'default' => 'Seat No'
+                ),
+    
+                 array(
+                    'id' => 'wbtm_seat_text',
+                    'title' => __( 'Seat', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Seat Details Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Seat'
+                ),
+    
+                 array(
+                    'id' => 'wbtm_seat_available_text',
+                    'title' => __( 'Seat Available', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Seat Available.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Seat Available'
+                ),
+    
+                 array(
+                    'id' => 'wbtm_passenger_info_seat_text',
+                    'title' => __( 'Passenger Info seat :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Passenger Info seat :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Passenger Info seat :'
+                ),
+    
+                 array(
+                    'id' => 'wbtm_qty_text',
+                    'title' => __( 'Qty :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Qty :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Qty :'
+                ),
+    
+                 array(
+                    'id' => 'wbtm_sub_total_text',
+                    'title' => __( 'Sub Total :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Sub Total :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Sub Total :'
+                ),
+                 array(
+                    'id' => 'wbtm_extra_bag_text',
+                    'title' => __( 'Extra Bag :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Extra Bag :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Extra Bag :'
+                ),
+                 array(
+                    'id' => 'wbtm_extra_bag_price_text',
+                    'title' => __( 'Extra Bag Price:', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Extra Bag Price :', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Extra Bag Price :'
+                ),
+    
+    
+                 array(
+                    'id' => 'wbtm_schedule_text',
+                    'title' => __( 'Schedule', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Schedule.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Schedule'
+                ),
+    
+                 array(
+                    'id' => 'wbtm_image_text',
+                    'title' => __( 'Image', 'bus-ticket-booking-with-seat-reservation' ),
+                    'details' =>__( 'Enter the text which you want to display as Image.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Image'
                 ),
     
                  array(
@@ -399,6 +516,53 @@ $translation_settings = array(
                  'details' =>__('Enter the text which you want to display as search button single bus seat list in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
                     'type' => 'text',
                     'default' => 'Seat List:'
+                ),
+    // Cart Intem Strings
+    
+             array(
+                    'id' => 'wbtm_cart_name_text',
+                    'title' => __('Name:', 'bus-ticket-booking-with-seat-reservation' ),
+                 'details' =>__('Enter the text which you want to display as Name in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Name:'
+                ),
+
+             array(
+                    'id' => 'wbtm_cart_email_text',
+                    'title' => __('Email:', 'bus-ticket-booking-with-seat-reservation' ),
+                 'details' =>__('Enter the text which you want to display as Email in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Email:'
+                ),
+
+             array(
+                    'id' => 'wbtm_cart_phone_text',
+                    'title' => __('Phone:', 'bus-ticket-booking-with-seat-reservation' ),
+                 'details' =>__('Enter the text which you want to display as Phone in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Phone:'
+                ),
+
+             array(
+                    'id' => 'wbtm_cart_gender_text',
+                    'title' => __('Gender:', 'bus-ticket-booking-with-seat-reservation' ),
+                 'details' =>__('Enter the text which you want to display as Gender in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Gender:'
+                ),
+             array(
+                    'id' => 'wbtm_cart_address_text',
+                    'title' => __('Address:', 'bus-ticket-booking-with-seat-reservation' ),
+                 'details' =>__('Enter the text which you want to display as Address in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Address:'
+                ),
+             array(
+                    'id' => 'wbtm_cart_journey_date_text',
+                    'title' => __('Journey Date:', 'bus-ticket-booking-with-seat-reservation' ),
+                 'details' =>__('Enter the text which you want to display as Journey Date in cart Page.', 'bus-ticket-booking-with-seat-reservation' ),
+                    'type' => 'text',
+                    'default' => 'Journey Date:'
                 ),
             )
         ),

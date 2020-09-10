@@ -65,36 +65,91 @@ $values = get_post_custom($id);
 
             mage_bus_search_form_only(true, $target); ?>
         </div>
-        <?php if (mage_bus_run_on_date(false) && isset($_GET['bus_start_route']) && ($_GET['bus_end_route']) && ($_GET['j_date'])) { ?>
+        <?php
+        //  if (mage_bus_run_on_date(false) && isset($_GET['bus_start_route']) && ($_GET['bus_end_route']) && ($_GET['j_date'])) { 
+         if (isset($_GET['bus_start_route']) && ($_GET['bus_end_route']) && ($_GET['j_date'])) { 
+            
+            $start = $_GET['bus_start_route'];
+            $end = $_GET['bus_end_route'];
+            $j_date = $_GET['j_date'];
+            $j_date = mage_convert_date_format($j_date, 'Y-m-d');
+
+            $check_has_price = mage_bus_seat_price($id, $start, $end, false);
+            // Buffer Time Calculation
+            $bus_bp_array = get_post_meta($id, 'wbtm_bus_bp_stops', true);
+            $bus_bp_array = unserialize($bus_bp_array);
+            $bp_time = $wbtmmain->wbtm_get_bus_start_time($start, $bus_bp_array);
+            $is_buffer = $wbtmmain->wbtm_buffer_time_check($bp_time, date('Y-m-d', strtotime($j_date)));
+            // Buffer Time Calculation END
+
+            $single_offday = false;
+            $has_bus = false;
+
+            // Is Bus Show or not
+            if( $is_buffer == 'yes' ) {
+                // Operational on day
+                $on_date = mage_bus_on_date($id, $j_date);
+                
+                if( $on_date == 'no' ) {
+                    // Operational off day
+                    $offday_start = get_post_meta($id, 'wbtm_od_start', true);
+                    $offday_end = get_post_meta($id, 'wbtm_od_end', true);
+
+                    // Day Off
+                    $day_off = mage_check_search_day_off($id, $j_date);
+                    
+                    if($offday_start != null) {
+                        $offday_start = date('Y-m-d', strtotime($offday_start));
+                        if($offday_end != null) {
+                            $offday_end = date('Y-m-d', strtotime($offday_end));
+                            $single_offday = false;
+                        } else {
+                            $offday_end = '';
+                            $single_offday = true;
+                        }
+                    } else {
+                        $offday_start = '';
+                        $offday_end = '';
+                        $single_offday = true;
+                    }
+
+
+                    if($single_offday) { // Only single date
+                        if( $j_date != $offday_start && $day_off === false ) {
+                            $has_bus = true;
+                        }
+                    } else { // Date range
+                        if( ($j_date >= $offday_start) && ($j_date <= $offday_end) ) {
+                            // Bus off
+                        } else {
+                            if(!$day_off) {
+                                $has_bus = true;
+                            }
+                        }
+                    }
+                    // Operational off day END
+                } elseif( $on_date == 'yes' ) {
+                    mage_bus_search_item($return, $id);
+                    $has_bus = true;
+                } else {
+                    // echo 'no bus';
+                }
+            }
+
+        ?>
             <div class="mage_bus_item <?php echo mage_bus_in_cart(false) ? 'mage_bus_in_cart' : ''; ?>">
                 <?php
-                $wbtm_bus_on_dates = get_post_meta(get_the_id(), 'wbtm_bus_on_dates', true) ? maybe_unserialize(get_post_meta(get_the_id(), 'wbtm_bus_on_dates', true)) : array();
 
-                if (is_array($wbtm_bus_on_dates) && sizeof($wbtm_bus_on_dates) > 0) {
+                if ($has_bus && $check_has_price) {
 
-
-                    $pday = array();
-                    foreach ($wbtm_bus_on_dates as $_wbtm_bus_on_dates) {
-                        $pday[] = date('Y-m-d', strtotime($_wbtm_bus_on_dates['wbtm_on_date_name']));
-                    }
-
-                    $search_date = date('Y-m-d', strtotime($_GET['j_date']));
-
-
-                    if (in_array($search_date, $pday)) {
-                        mage_next_date_suggestion(false, true);
-                        mage_bus_route_title(false);
-                        mage_bus_item_seat_details(false);
-                    } else {
-                        echo '<div class="wbtm-warnig">';
-                        _e('Uhu! No Cheating, This bus available only in the particular date. :) ', 'bus-ticket-booking-with-seat-reservation');
-                        echo '</div>';
-                    }
-
-                } else {
                     mage_next_date_suggestion(false, true);
                     mage_bus_route_title(false);
                     mage_bus_item_seat_details(false);
+
+                } else {
+                    echo '<div class="wbtm-warnig">';
+                    _e('This bus available only in the particular date. :) ', 'bus-ticket-booking-with-seat-reservation');
+                    echo '</div>';
                 }
                 ?>
             </div>
